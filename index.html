@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DWCI Asset Packs — AI-Enabled PM/PMO Templates</title>
+<meta name="description" content="Battle-tested project management templates from David Woldt Consulting. AI-Enabled PMO Starter Kit, RACI Matrix Pro Pack, and a free RACI template." />
+<meta property="og:title" content="DWCI Asset Packs — AI-Enabled PM/PMO Templates" />
+<meta property="og:description" content="Ship faster with clean-room, ready-to-use PM/PMO templates. Flagship Starter Kit, RACI Pro Pack, and a free RACI template." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./assets/DWCI_Preview_Starter_Kit_1280x720.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<style>
+  :root{
+    --evergreen:#11362b;      /* deep evergreen */
+    --evergreen-2:#1c4d3e;
+    --brass:#b8893b;          /* brass accent */
+    --brass-2:#d8a85a;
+    --ink:#16201c;
+    --paper:#f7f5ef;
+    --card:#ffffff;
+    --muted:#5d6b63;
+    --line:#e4e0d4;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(17,54,43,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  /* header */
+  header.site{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+  .brand .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--evergreen),var(--evergreen-2));color:var(--brass-2);display:grid;place-items:center;font-size:14px;font-weight:800}
+  .nav a.cta{background:var(--evergreen);color:#fff;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14px}
+  /* hero */
+  .hero{padding:72px 0 40px;background:radial-gradient(1200px 400px at 70% -10%,rgba(184,137,59,.16),transparent),linear-gradient(180deg,#fff,transparent)}
+  .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.07;margin:0 0 16px;letter-spacing:-.5px}
+  .hero p.lede{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:680px;margin:0 0 28px}
+  .pill{display:inline-block;background:rgba(17,54,43,.07);color:var(--evergreen);font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;margin-bottom:20px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;border:0;cursor:pointer;font-weight:700;font-size:15px;padding:14px 24px;border-radius:999px;text-decoration:none;transition:transform .08s ease,opacity .2s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--brass);color:#241a08}
+  .btn-primary:hover{background:var(--brass-2)}
+  .btn-ghost{background:transparent;color:var(--evergreen);border:1.5px solid var(--evergreen)}
+  .btn[disabled],.btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed;pointer-events:none}
+  /* trust row */
+  .trust{display:flex;gap:28px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:26px}
+  .trust span{display:flex;align-items:center;gap:8px}
+  .trust b{color:var(--evergreen)}
+  /* sections */
+  section{padding:56px 0}
+  h2.section{font-size:clamp(24px,3.4vw,34px);margin:0 0 8px;letter-spacing:-.3px}
+  .sub{color:var(--muted);margin:0 0 32px;max-width:620px}
+  /* product grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .card.flag{border:2px solid var(--brass)}
+  .card .thumb{aspect-ratio:16/9;width:100%;object-fit:cover;background:#eee;border-bottom:1px solid var(--line)}
+  .card .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .tag{align-self:flex-start;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:4px 10px;border-radius:999px}
+  .tag.flagship{background:var(--brass);color:#241a08}
+  .tag.entry{background:rgba(17,54,43,.1);color:var(--evergreen)}
+  .tag.free{background:#e7f0e9;color:var(--evergreen-2)}
+  .card h3{margin:2px 0 0;font-size:21px}
+  .card p.desc{color:var(--muted);font-size:15px;margin:0;flex:1}
+  .price{font-size:30px;font-weight:800;letter-spacing:-.5px}
+  .price small{font-size:14px;font-weight:600;color:var(--muted)}
+  ul.feat{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:7px;font-size:14px}
+  ul.feat li{display:flex;gap:9px;align-items:flex-start}
+  ul.feat li::before{content:"✓";color:var(--brass);font-weight:800}
+  .card .buy{margin-top:14px}
+  .card .buy .btn{width:100%;text-align:center}
+  /* free / lead magnet */
+  .lead{background:linear-gradient(135deg,var(--evergreen),var(--evergreen-2));color:#fff;border-radius:24px;padding:40px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+  .lead h2{color:#fff;margin-top:0}
+  .lead p{color:rgba(255,255,255,.82)}
+  .lead .formbox{background:#fff;color:var(--ink);border-radius:16px;padding:24px}
+  .lead .formbox h4{margin:0 0 6px;font-size:18px}
+  .lead .formbox p{color:var(--muted);font-size:14px;margin:0 0 14px}
+  /* MailerLite fallback form (replaced by embed once provided) */
+  .ml-fallback input{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;margin-bottom:10px}
+  .ml-fallback .btn{width:100%}
+  .ml-note{font-size:12px;color:var(--muted);margin-top:10px}
+  /* footer */
+  footer.site{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+  .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{color:var(--evergreen)}
+  .config-warn{background:#fff7e6;border:1px solid #f0d488;color:#7a5a12;font-size:13px;padding:10px 14px;border-radius:10px;margin-top:14px;display:none}
+  @media(max-width:780px){.lead{grid-template-columns:1fr;padding:28px}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">DW</span> David Woldt Consulting</div>
+    <a class="cta" href="#packs">View asset packs</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill">Clean-room PM/PMO templates · ready to ship</span>
+      <h1>Run a sharper PMO<br/>without building it from scratch.</h1>
+      <p class="lede">Battle-tested, AI-enabled project management templates distilled from real delivery work — RACI matrices, governance, and a full PMO playbook. Download, brand, deliver.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#packs">Browse the packs</a>
+        <a class="btn btn-ghost" href="#free">Get the free RACI template</a>
+      </div>
+      <div class="trust">
+        <span>📦 <b>Instant download</b></span>
+        <span>🔒 <b>Clean-room verified</b> — no client data</span>
+        <span>♻️ <b>Editable</b> .xlsx files</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="packs">
+    <div class="wrap">
+      <h2 class="section">Asset packs</h2>
+      <p class="sub">Three tiers, one delivery system. Buy once, own it forever.</p>
+      <div class="grid">
+
+        <!-- FLAGSHIP -->
+        <article class="card flag">
+          <img class="thumb" src="./assets/DWCI_Preview_Starter_Kit_1280x720.png" alt="AI-Enabled PMO Starter Kit preview" loading="lazy"/>
+          <div class="body">
+            <span class="tag flagship">Flagship</span>
+            <h3>AI-Enabled PMO Starter Kit</h3>
+            <p class="desc">The complete operating kit: the PMO Template Playbook plus the full RACI Matrix Pro Pack bundled in, with a quick-start guide.</p>
+            <ul class="feat">
+              <li>PMO Template Playbook (.xlsx)</li>
+              <li>RACI Matrix Pro Pack included</li>
+              <li>Quick-start PDF</li>
+            </ul>
+            <div class="price">$297 <small>one-time</small></div>
+            <div class="buy"><a class="btn btn-primary" data-checkout="flagship" href="#" aria-disabled="true">Buy the Starter Kit</a></div>
+          </div>
+        </article>
+
+        <!-- ENTRY -->
+        <article class="card">
+          <img class="thumb" src="./assets/DWCI_Preview_RACI_Pro_Pack_1280x720.png" alt="RACI Matrix Pro Pack preview" loading="lazy"/>
+          <div class="body">
+            <span class="tag entry">Entry</span>
+            <h3>RACI Matrix Pro Pack</h3>
+            <p class="desc">Two production-grade RACI matrices — Agile Delivery and Deliverable Governance — with a quick-start guide.</p>
+            <ul class="feat">
+              <li>Agile Delivery RACI (.xlsx)</li>
+              <li>Deliverable Governance RACI (.xlsx)</li>
+              <li>Quick-start PDF</li>
+            </ul>
+            <div class="price">$79 <small>one-time</small></div>
+            <div class="buy"><a class="btn btn-primary" data-checkout="propack" href="#" aria-disabled="true">Buy the Pro Pack</a></div>
+          </div>
+        </article>
+
+        <!-- FREE -->
+        <article class="card">
+          <img class="thumb" src="./assets/DWCI_Preview_Free_RACI_1280x720.png" alt="Free RACI Template preview" loading="lazy"/>
+          <div class="body">
+            <span class="tag free">Free</span>
+            <h3>RACI Template</h3>
+            <p class="desc">A single-tab Agile RACI to get you started. Free — just tell us where to send it.</p>
+            <ul class="feat">
+              <li>Single-tab Agile RACI (.xlsx)</li>
+              <li>Instant email delivery</li>
+              <li>No credit card</li>
+            </ul>
+            <div class="price">$0</div>
+            <div class="buy"><a class="btn btn-ghost" href="#free">Get it free</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="free">
+    <div class="wrap">
+      <div class="lead">
+        <div>
+          <h2>Start with the free RACI template</h2>
+          <p>Drop your email and we’ll send the single-tab Agile RACI right away — plus the occasional note when we ship new packs. No spam, unsubscribe anytime.</p>
+        </div>
+        <div class="formbox">
+          <h4>Email me the free template</h4>
+          <p>Delivered instantly to your inbox.</p>
+
+          <!-- ============================================================
+               MAILERLITE EMBED GOES HERE.
+               Paste your MailerLite embedded form snippet inside this div
+               (replace the fallback form below). The fallback is shown only
+               until the real embed is added.
+               ============================================================ -->
+          <div id="mailerlite-form">
+            <form class="ml-fallback" onsubmit="return false;" aria-label="Free template signup (placeholder)">
+              <input type="email" placeholder="you@company.com" aria-label="Email address" required />
+              <button class="btn btn-primary" type="submit">Send me the template</button>
+            </form>
+            <div class="ml-note">Signup form is being connected. Check back shortly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap footrow">
+    <div>© <span id="yr">2026</span> David Woldt Consulting, Inc. · All sales final.</div>
+    <div>Secure checkout via Lemon Squeezy · Questions? <a href="mailto:woldtd2@yahoo.com">contact us</a></div>
+  </div>
+</footer>
+
+<script>
+  // ============================================================
+  //  CONFIG — paste your Lemon Squeezy checkout URLs here.
+  //  Leave a value empty ("") to keep its button disabled.
+  // ============================================================
+  const CHECKOUT = {
+    flagship: "",   // $297 — DWCI_AI-Enabled_PMO_Starter_Kit.zip
+    propack:  ""    // $79  — DWCI_RACI_Matrix_Pro_Pack.zip
+  };
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  let missing = false;
+  document.querySelectorAll('[data-checkout]').forEach(function(el){
+    const url = CHECKOUT[el.getAttribute('data-checkout')];
+    if(url){ el.href = url; el.removeAttribute('aria-disabled'); el.target = "_blank"; el.rel = "noopener"; }
+    else { missing = true; }
+  });
+</script>
+</body>
+</html>
