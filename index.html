@@ -113,6 +113,28 @@
   .faq .ans a{color:var(--evergreen);font-weight:600}
   @media(max-width:780px){.lead{grid-template-columns:1fr;padding:28px}}
 </style>
+<!-- ============================================================
+     ANALYTICS — paste your Google Analytics 4 Measurement ID
+     (looks like G-XXXXXXXXXX) into GA4_ID below to enable.
+     Until an ID is set, NO analytics script or cookie loads.
+     Prefer cookieless? Replace this block with Plausible or
+     Cloudflare Web Analytics — both are one <script> tag.
+     ============================================================ -->
+<script>
+  window.GA4_ID = ""; // e.g. "G-XXXXXXXXXX"
+  (function(){
+    var id = window.GA4_ID;
+    if(!id) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', id, { anonymize_ip: true });
+  })();
+</script>
 </head>
 <body>
 <header class="site">
@@ -265,9 +287,14 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   let missing = false;
   document.querySelectorAll('[data-checkout]').forEach(function(el){
-    const url = CHECKOUT[el.getAttribute('data-checkout')];
-    if(url){ el.href = url; el.removeAttribute('aria-disabled'); el.target = "_blank"; el.rel = "noopener"; }
-    else { missing = true; }
+    const key = el.getAttribute('data-checkout');
+    const url = CHECKOUT[key];
+    if(url){
+      el.href = url; el.removeAttribute('aria-disabled'); el.target = "_blank"; el.rel = "noopener";
+      el.addEventListener('click', function(){
+        if(window.gtag){ gtag('event', 'begin_checkout', { item_id: key }); }
+      });
+    } else { missing = true; }
   });
 </script>
 </body>
