@@ -109,6 +109,7 @@
       <p class="lede">Battle-tested, AI-enabled project management templates distilled from real delivery work — RACI matrices, governance, and a full PMO playbook. Download, brand, deliver.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#packs">Browse the packs</a>
+        <a class="btn btn-ghost" href="#packs">Start with the free RACI</a>
       </div>
       <div class="trust">
         <span>📦 <b>Instant download</b></span>
@@ -121,7 +122,7 @@
   <section id="packs">
     <div class="wrap">
       <h2 class="section">Asset packs</h2>
-      <p class="sub">Buy once, own it forever. Instant download via secure checkout.</p>
+      <p class="sub">Buy once, own it forever. Instant download via secure checkout. Or start free.</p>
       <div class="grid">
 
         <!-- FLAGSHIP -->
@@ -158,13 +159,26 @@
           </div>
         </article>
 
-        <!-- FREE tier deferred until MailerLite is wired (restore from git history). -->
+        <!-- FREE -->
+        <article class="card">
+          <img class="thumb" src="./assets/DWCI_Preview_Free_RACI_1280x720.png" alt="Free RACI Template preview" loading="lazy"/>
+          <div class="body">
+            <span class="tag free">Free</span>
+            <h3>Free RACI Template</h3>
+            <p class="desc">A single-tab Agile-delivery RACI matrix in Excel — rename roles, add rows, make it yours in minutes. Enter your email at checkout and it's sent straight to you.</p>
+            <ul class="feat">
+              <li>Agile Delivery RACI (.xlsx)</li>
+              <li>R / A / C / I legend included</li>
+              <li>No cost — just your email</li>
+            </ul>
+            <div class="price">$0 <small>free</small></div>
+            <div class="buy"><a class="btn btn-ghost" data-checkout="free" href="#" aria-disabled="true">Get the free template</a></div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
-
-  <!-- Free-template lead-magnet section deferred until MailerLite is wired (restore from git history). -->
 </main>
 
 <footer class="site">
@@ -181,7 +195,8 @@
   // ============================================================
   const CHECKOUT = {
     flagship: "https://dwcitemplates.lemonsqueezy.com/checkout/buy/aec052bb-4ac5-4652-ab49-3b4ac58191f8",   // $247 — AI-Enabled PMO Starter Kit
-    propack:  "https://dwcitemplates.lemonsqueezy.com/checkout/buy/5c9e2a48-cf7f-486f-9d33-d6ff19b22d6a"    // $59  — RACI Matrix Pro Pack
+    propack:  "https://dwcitemplates.lemonsqueezy.com/checkout/buy/5c9e2a48-cf7f-486f-9d33-d6ff19b22d6a",   // $59  — RACI Matrix Pro Pack
+    free:     "https://dwcitemplates.lemonsqueezy.com/checkout/buy/4d1edbce-3346-4607-b368-a0aba6db3d2c"    // $0   — Free RACI Template (LS email-capture delivery)
   };
 
   document.getElementById('yr').textContent = new Date().getFullYear();
